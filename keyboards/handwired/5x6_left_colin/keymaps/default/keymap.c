@@ -18,7 +18,8 @@
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
-    _FN
+    _FN,
+    _GM
 };
 
 
@@ -37,7 +38,7 @@ enum custom_keycodes {
  *   +------+------|  S   |  D   |  F   |  G   |
  *   | ESC  |  A   |------+------+------+------|
  *   +------+------|  X   |  C   |  V   |  B   |
- *   | CTRL |  Z   |------+------+------+------| 
+ *   | CTRL |  Z   |------+------+------+------|
  *   +------+------| ALT  |ALTTAB|
  *                 +------+------+
  *                                +------+------+
@@ -47,30 +48,40 @@ enum custom_keycodes {
  *                                       |  XXX | SPACE|
  *                                       +------+------+
  *                                       |  XXX |  XXX |
- *                                       +------+------+  
- *  
+ *                                       +------+------+
+ *
  */
-const uint16_t PROGMEM keymaps[2][MATRIX_ROWS][MATRIX_COLS] = {
+const uint16_t PROGMEM keymaps[3][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = LAYOUT_DACTYL_LEFT(
-    KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5,  
-    KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,  
-    KC_ESC, KC_A, KC_S, KC_D, KC_F, KC_G, 
-    KC_LCTRL, KC_Z, KC_X, KC_C, KC_V, KC_B,  
-                    KC_LALT, ALTTAB,  
-                            TG(_FN), KC_LSHIFT, 
-                                XXXXXXX, KC_SPACE, 
-                                XXXXXXX, XXXXXXX  
+    KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5,
+    KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,
+    KC_ESC, KC_A, KC_S, KC_D, KC_F, KC_G,
+    KC_LCTRL, KC_Z, KC_X, KC_C, KC_V, KC_B,
+                    KC_LALT, ALTTAB,
+                            TG(_FN), KC_LSHIFT,
+                                XXXXXXX, KC_SPACE,
+                                XXXXXXX, TG(_GM)
+    ),
+    [_GM] = LAYOUT_DACTYL_LEFT(
+    KC_GRV, _______, _______, _______, _______, _______,
+    KC_TAB, KC_T, KC_Q, KC_W, KC_E, KC_R,
+    _______, KC_G, KC_A, KC_S, KC_D, KC_F,
+    KC_LCTRL, KC_B, KC_Z, KC_X, KC_C, KC_V,
+                    _______, KC_SPACE,
+                            _______, KC_LSHIFT,
+                                _______, _______,
+                                _______, _______
     ),
     [_FN] = LAYOUT_DACTYL_LEFT(
-    _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,  
-    _______, _______, _______, _______, _______, _______,  
-    KC_CLCK, _______, _______, _______, _______, _______,  
-    _______, _______, _______, _______, _______, _______,  
-                    KC_PGUP, KC_PGDOWN,  
-                            _______, _______, 
-                                _______, _______, 
-                                _______, _______  
+    _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,
+    _______, _______, _______, _______, _______, _______,
+    KC_CLCK, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______,
+                    KC_PGUP, KC_PGDOWN,
+                            _______, _______,
+                                _______, _______,
+                                _______, _______
     )
 };
 
