@@ -28,15 +28,15 @@ enum layer_names {
 
 const uint16_t PROGMEM keymaps[3][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
-    [_BASE] = COLIN_RIGHT_DACTYL_LAYOUT( 
-        KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC, 
-        KC_Y, KC_U, KC_I, KC_O, KC_P, KC_QUOT, 
-        KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_ENT, 
-        KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_NO, 
+    [_BASE] = COLIN_RIGHT_DACTYL_LAYOUT(
+        KC_6, KC_7, KC_8, KC_9, KC_0, KC_BSPC,
+        KC_Y, KC_U, KC_I, KC_O, KC_P, KC_QUOT,
+        KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_ENT,
+        KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSLS,
                   KC_PMNS, KC_PPLS,
-          KC_SPC, MO(_FN), 
-    KC_NO, KC_NO, 
-    KC_NO, KC_NO 
+          KC_SPC, MO(_FN),
+    KC_NO, KC_NO,
+    KC_NO, KC_NO
 ),
     [_FN] = COLIN_RIGHT_DACTYL_LAYOUT(
         KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, 
@@ -49,14 +49,14 @@ const uint16_t PROGMEM keymaps[3][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______  
 ),
     [_RS] = COLIN_RIGHT_DACTYL_LAYOUT(
-        _______, _______, _______, _______, _______, _______, 
-        _______, _______, _______, _______, _______, _______, 
-        _______, RESET, _______, _______, _______, _______, 
-        _______, _______, _______, _______, _______, _______, 
-                  _______, _______, 
-          _______, _______, 
-    _______, _______, 
-    _______, _______  
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, RESET, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+                  _______, _______,
+          _______, _______,
+    _______, _______,
+    _______, _______
     ),
 };
 
