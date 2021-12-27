@@ -1,19 +1,5 @@
-/*
-Copyright 2021 Colin
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+// Copyright 2021 MeTA2X (@MeTA2X)
+// SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
 
@@ -22,13 +8,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0xFEED
 #define PRODUCT_ID   0x0000
-#define DEVICE_VER   0x0004
-#define MANUFACTURER Colin
-#define PRODUCT      5x6_left_colin
+#define DEVICE_VER   0x0001
+#define MANUFACTURER MeTA2X
+#define PRODUCT      5x6_right_colin
 
 /* key matrix size */
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 6
+#define MATRIX_ROWS 2
+#define MATRIX_COLS 3
 
 /*
  * Keyboard Matrix Assignments
@@ -40,8 +26,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
-#define MATRIX_ROW_PINS { B5, D1, D0, D4, E6, B1 }
-#define MATRIX_COL_PINS { D7, B6, B2, C6, B3, B4 }
+#define MATRIX_ROW_PINS { D0, D5 }
+#define MATRIX_COL_PINS { F1, F0, B0 }
 #define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
