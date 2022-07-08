@@ -15,7 +15,6 @@
  */
 #include QMK_KEYBOARD_H
 #include "5x6_right_colin.h"
-
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
@@ -41,8 +40,8 @@ const uint16_t PROGMEM keymaps[3][MATRIX_ROWS][MATRIX_COLS] = {
     [_FN] = COLIN_RIGHT_DACTYL_LAYOUT(
         KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, 
         _______, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_F12, 
-        KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, KC_DEL, 
-        _______, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, _______, MO(_RS), 
+        KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_INSERT, KC_DEL, 
+        _______, _______, _______, _______, _______, MO(_RS), 
                   _______, _______, 
           _______, _______, 
     _______, _______, 
