@@ -24,7 +24,6 @@ enum layer_names {
 
 // Defines the keycodes used by our macros in process_record_user
 
-
 const uint16_t PROGMEM keymaps[3][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = COLIN_RIGHT_DACTYL_LAYOUT(

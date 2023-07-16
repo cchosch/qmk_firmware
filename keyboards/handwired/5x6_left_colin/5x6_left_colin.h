@@ -19,6 +19,31 @@
 #include "quantum.h"
 
 #define XXX KC_NO
+
+/*
+ *
+ *                 +------+------+------+------+
+ *   +------+------|  2   |  3   |  4   |  5   |
+ *   |  `   |  1   |------+------+------+------|
+ *   +------+------|  W   |  E   |  R   |  T   |
+ *   | TAB  |  Q   |------+------+------+------|
+ *   +------+------|  S   |  D   |  F   |  G   |
+ *   | ESC  |  A   |------+------+------+------|
+ *   +------+------|  X   |  C   |  V   |  B   |
+ *   | CTRL |  Z   |------+------+------+------|
+ *   +------+------| ALT  |  LOS |
+ *                 +------+------+
+ *                                +------+------+
+ *                                |  FN  | SHIFT|
+ *                                +------+------+
+ *                                       +------+------+
+ *                                       |  XXX | SPACE|
+ *                                       +------+------+
+ *                                       |  XXX |  XXX |
+ *                                       +------+------+
+ *
+ */
+
 /* This is a shortcut to help you visually see your layout.
  *
  * The first section contains all of the arguments representing the physical
