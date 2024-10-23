@@ -17,14 +17,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0xFEED
 #define PRODUCT_ID   0x0000
-#define DEVICE_VER   0x0011
-#define MANUFACTURER Colin
-#define PRODUCT      5x6_right
+#define DEVICE_VER   0x0012
+#define MANUFACTURER "Colin Hoscheit"
+#define PRODUCT      "5x6_right"
 
 /* key ard matrix size */
 #define MATRIX_ROWS 6

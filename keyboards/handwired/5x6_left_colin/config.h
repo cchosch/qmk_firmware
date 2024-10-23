@@ -17,14 +17,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#include "config_common.h"
-
 /* USB Device descriptor parameter */
 #define VENDOR_ID    0xFEED
 #define PRODUCT_ID   0x0000
-#define DEVICE_VER   0x0004
-#define MANUFACTURER Colin
-#define PRODUCT      5x6_left_colin
+#define DEVICE_VER   0x0006
+#define MANUFACTURER "Colin"
+#define PRODUCT      "5x6_left_colin"
 
 /* key matrix size */
 #define MATRIX_ROWS 6
@@ -42,7 +40,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #define MATRIX_ROW_PINS { B5, D1, D0, D4, E6, B1 }
 #define MATRIX_COL_PINS { D7, B6, B2, C6, B3, B4 }
-#define UNUSED_PINS
 
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW

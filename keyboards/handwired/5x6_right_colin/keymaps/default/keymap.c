@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[3][MATRIX_ROWS][MATRIX_COLS] = {
         KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, 
         _______, KC_MINS, KC_EQL, KC_LBRC, KC_RBRC, KC_F12, 
         KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_INSERT, KC_DEL, 
-        _______, _______, _______, _______, _______, MO(_RS), 
+        _______, KC_MPRV, KC_MPLY, KC_MNXT, _______, MO(_RS), 
                   _______, _______, 
           _______, _______, 
     _______, _______, 
@@ -49,7 +49,7 @@ const uint16_t PROGMEM keymaps[3][MATRIX_ROWS][MATRIX_COLS] = {
     [_RS] = COLIN_RIGHT_DACTYL_LAYOUT(
         _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______,
-        _______, RESET, _______, _______, _______, _______,
+        _______, QK_BOOT, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______,
                   _______, _______,
           _______, _______,

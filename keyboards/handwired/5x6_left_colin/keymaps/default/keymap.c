@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "5x6_left_colin.h"
 
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
@@ -31,49 +32,47 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[4][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
-    [_BASE] = LAYOUT_DACTYL_LEFT(
+    [_BASE] = COLIN_RIGHT_DACTYL_LAYOUT(
     KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5,  
     KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T,  
     KC_ESC, KC_A, KC_S, KC_D, KC_F, KC_G, 
-    KC_LCTRL, KC_Z, KC_X, KC_C, KC_V, KC_B,  
+    KC_LCTL, KC_Z, KC_X, KC_C, KC_V, KC_B,  
                     KC_LALT, KC_LGUI,  
-                            MO(_FN), KC_LSHIFT, 
+                            MO(_FN), KC_LSFT, 
                                 XXXXXXX, KC_SPACE, 
                                 XXXXXXX, TG(_GM)  
-    ),
-    [_GM] = LAYOUT_DACTYL_LEFT(
+),
+    [_GM] = COLIN_RIGHT_DACTYL_LAYOUT(
     _______, _______, _______, _______, _______, _______,  
     _______, KC_T, KC_Q, KC_W, KC_E, KC_R,   
     _______, KC_G, KC_A, KC_S, KC_D, KC_F,  
     _______, KC_B, KC_Z, KC_X, KC_C, KC_V,   
                     _______, _______,  
                             _______, KC_SPACE, 
-                                _______, KC_LSHIFT, 
+                                _______, KC_LSFT, 
                                 _______, _______  
-    ),
-
-    [_FN] = LAYOUT_DACTYL_LEFT(
+),
+    [_FN] = COLIN_RIGHT_DACTYL_LAYOUT(
     _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,  
     MO(_RS), _______, _______, _______, _______, _______,  
-    KC_CLCK, _______, _______, _______, _______, _______,  
-    _______, _______, _______, _______, _______, _______,  
-                    KC_PGUP, KC_PGDOWN,  
+    KC_CAPS, _______, _______, _______, _______, _______,  
+    ALTTAB, _______, _______, _______, _______, _______,  
+                    KC_PGUP, KC_PGDN,  
                             _______, _______, 
                                 _______, _______, 
                                 _______, _______  
-    ),
-    [_RS] = LAYOUT_DACTYL_LEFT(
+),
+    [_RS] = COLIN_RIGHT_DACTYL_LAYOUT(
     _______, _______, _______, _______, _______, _______,  
-    _______, RESET, EEP_RST, _______, _______, _______,  
+    _______, QK_BOOT, _______, _______, _______, _______,  
     _______, _______, _______, _______, _______, _______,  
     _______, _______, _______, _______, _______, _______,  
                     _______, _______,  
                             _______, _______, 
                                 _______, _______, 
                                 _______, _______  
-    )
+),
 };
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch(keycode){
         case ALTTAB:
@@ -86,3 +85,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         default: return true;
     }
 }
+/**/
